@@ -19,7 +19,7 @@ public class SenqueceBolt implements IRichBolt {
     // 仅在bolt开始处理元组之前调用
     @Override
     public void prepare(Map map, TopologyContext topologyContext, OutputCollector outputCollector) {
-
+        this.collector = outputCollector;
     }
 
     // 处理输入的单个元组
